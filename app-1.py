@@ -1,6 +1,8 @@
 import streamlit as st
 import requests
 
+url = 'http://127.0.0.1:5000/predict'
+
 # Streamlit app
 st.title("Credit Card Approval Prediction")
 
