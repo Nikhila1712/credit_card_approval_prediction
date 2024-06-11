@@ -1,69 +1,50 @@
-"# credit_card_approval_prediction" 
- 1. Data Collection
- The dataset for this analysis was sourced from [source name, e.g., Kaggle, UCI Machine Learning Repository]. It contains various features related to an individual's demographic and financial profile that banks 
- and financial institutions typically use to approve or reject credit card applications. The dataset includes age, income, employment status, credit score, and other relevant factors.
+# credit_card_approval_prediction
 
- 2. Data Preprocessing
- Before performing any analysis, the data was thoroughly preprocessed to ensure quality and consistency. This step included:
+This project aims to predict credit card approval using a logistic regression model. The process involves several key steps:
 
- Handling Missing Values: Missing data was identified and handled appropriately. For numerical columns, missing values were replaced with the mean or median. For categorical columns, missing values were imputed 
- with the mode or a placeholder value.
- Removing Duplicates: Duplicate records were identified and removed to ensure data integrity.
- Feature Selection: Only relevant features were selected for further analysis. Irrelevant or redundant columns were dropped.
+Data Collection and Preparation:
 
- 3. Exploratory Data Analysis (EDA)
- EDA was conducted to understand the underlying patterns and relationships in the data. This included:
+The dataset, containing various financial and personal attributes, is cleaned and preprocessed.
+Missing values are handled, duplicates are removed, and categorical variables are encoded for machine-learning compatibility.
 
- Descriptive Statistics: Summary statistics such as mean, median, and standard deviation were calculated for numerical features.
- Visualizations: Various plots were created to visualize the distribution and relationships of the data:
- Histograms to visualize the distribution of features such as age, income, etc.
- Box Plots to identify outliers and understand the spread of the data.
- Correlation Matrix to examine the relationships between different features and identify potential multicollinearity.
+Source: https://www.kaggle.com/datasets/rikdifos/credit-card-approval-prediction
 
- 4. Feature Engineering
- Based on the insights from EDA, new features were created to enhance the model's performance:
+Feature Engineering:
 
- AGE: Converted DAYS_BIRTH to age in years.
- YEARS_EMPLOYED: Converted DAYS_EMPLOYED to years.
- INCOME_PER_FAM_MEMBER: Calculated as the total income divided by the number of family members.
+New features are created, such as AGE, YEARS_EMPLOYED, and INCOME_PER_FAM_MEMBER, to improve model performance.
+Data is split into training and testing sets, and features are scaled for uniformity.
 
- 5. Data Preparation
- The data was prepared for modeling by performing the following steps:
+Handling Imbalanced Data:
 
- Encoding Categorical Variables: Categorical variables were encoded using one-hot and label encoding techniques to convert them into numerical values.
- Feature Scaling: Features were scaled using standardization to ensure that they are on a similar scale, which is important for algorithms like logistic regression.
+The class imbalance issue is addressed using SMOTE (Synthetic Minority Over-sampling Technique) to ensure balanced training data.
 
- 6. Handling Imbalanced Data
- The target variable was imbalanced, with a significantly higher number of instances of one class compared to the other. To address this imbalance:
+Model Building and Evaluation:
 
- SMOTE (Synthetic Minority Over-sampling Technique): SMOTE was used to generate synthetic samples for the minority class to balance the dataset.
+A logistic regression model is trained and evaluated using metrics like accuracy, precision, recall, and F1 score.
+Hyperparameter tuning is performed using GridSearchCV to optimize model parameters.
 
- 7. Model Building and Evaluation
- Multiple models were built and evaluated to identify the best-performing model for credit card approval prediction:
+Model Deployment with Flask:
 
- Logistic Regression: A logistic regression model was trained and evaluated. Key performance metrics such as accuracy, precision, recall, and F1-score were calculated.
- Random Forest: A random forest model was also trained to compare performance with logistic regression. However, logistic regression was chosen for its simplicity and interoperability.
+A Flask API is created to serve the model, with an endpoint to handle prediction requests.
+The Flask server is run locally for testing and can be deployed to a production environment.
 
- 8. Model Tuning
- Hyperparameter tuning was performed to optimize the model:
- Grid Search CV: Grid search with cross-validation was used to identify the best hyperparameters for the logistic regression model.
+Interactive Web Interface with Streamlit:
 
- 9. Model Evaluation
- The tuned model was evaluated on the test set to assess its performance. The evaluation metrics included:
- Confusion Matrix: To understand the true positives, false positives, true negatives, and false negatives.
- ROC Curve: To visualize the trade-off between the true positive rate and false positive rate.
+A Streamlit app provides an interactive web interface for users to input data and receive predictions.
+The Streamlit app communicates with the Flask API to fetch prediction results and display them.
 
- Classification Report: Detailed report showing precision, recall, F1-score, and support for each class.
+Deployment on Streamlit Community Cloud:
+The Streamlit app is deployed on the Streamlit Community Cloud, providing a public interface for the model.
 
- 10. Model Deployment
- The final model was deployed using a Flask API to make predictions based on new input data. The model predicts whether a given set of features will result in credit card approval or not.
+GitHub Repository:
+The project is version-controlled using Git and hosted on GitHub, ensuring reproducibility and collaboration.
 
- Streamlit Application
- To provide an interactive interface for users, a Streamlit application was developed. The app allows users to input their features and get an instant prediction on their credit card approval status.
+Instructions for Running the Project Locally:
+1. Clone the repository.
+2. Set up a virtual environment and install dependencies.
+3. Run the Flask server.
+4. Run the Streamlit app.
 
- How to Use the Streamlit App
- Input Features: Users can input their age, income, employment details, and other relevant features through a user-friendly interface.
- Predict: By clicking the 'Predict' button, the app sends the input data to the deployed model and returns the prediction.
- Result: The app displays whether the credit card application is likely to be approved or not.
+
 
 
