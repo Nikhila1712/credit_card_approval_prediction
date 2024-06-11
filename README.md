@@ -48,7 +48,7 @@ Instructions for Running the Project Locally:
 Instructions for Running the Project Locally
 Clone the Repository:
 
-git clone https://github.com/Nikhila1712/credit_card_analysis.git
+git clone "Local Repository'
 cd credit_card_analysis
 
 Set Up Virtual Environment:
