@@ -64,6 +64,33 @@ python app.py
 Run Streamlit App:
 streamlit run app-1.py
 
+# Key Insights 
+Performance Metrics:
+Training Accuracy: 56.36%
+Test Accuracy: 59.06%
+Other metrics such as precision, recall, and F1 score were also evaluated, with the best logistic regression model achieving:
+Precision: 0.15%
+Recall: 49.09%
+F1
+
+1. Annual income and income per family member were significant factors. Applicants with higher incomes and higher income per family member were more likely to be approved for credit cards.
+   Visualization revealed a clear trend where higher income groups had higher approval rates.
+
+2. Years of employment had a positive impact on approval rates. Applicants with longer employment durations were favored, indicating stability and reliability.
+   The data showed that applicants with over five years of employment had notably higher approval rates.
+
+3. Credit score was one of the most critical factors. Higher credit scores are strongly correlated with higher approval chances.
+   Additionally, applicants with fewer defaults and active loans were more likely to be approved, highlighting the importance of a clean credit history.
+
+4. The ratio of current debt to income was a crucial metric. Lower debt-to-income ratios were associated with higher approval rates.
+   Applicants with lower monthly mortgage/rent and overall debt levels had better approval odds.
+
+5. Age and marital status also played roles. Middle-aged applicants and those who were married or widowed tended to have higher approval rates.
+   Younger applicants and those with multiple dependents had lower approval probabilities, likely due to perceived higher financial risk.
+
+
+
+
 
 
 
