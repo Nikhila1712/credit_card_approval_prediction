@@ -45,6 +45,25 @@ Instructions for Running the Project Locally:
 3. Run the Flask server.
 4. Run the Streamlit app.
 
+Instructions for Running the Project Locally
+Clone the Repository:
+
+git clone https://github.com/Nikhila1712/credit_card_analysis.git
+cd credit_card_analysis
+
+Set Up Virtual Environment:
+python -m venv env
+source env/bin/activate  # On Windows: env\Scripts\activate
+
+Install Dependencies:
+pip install -r requirements.txt
+
+Run Flask Server:
+python app.py
+
+Run Streamlit App:
+streamlit run app-1.py
+
 
 
 
